@@ -1,0 +1,7 @@
+# ... existing content ...
+
+# Fody - auto-generated XML schema
+FodyWeavers.xsd
+
+# Local Copilot configuration (not tracked in repository)
+.github/

@@ -11,11 +11,28 @@ endif()
 
 project ("DamoclesAI")
 
-# Add source to this project's executable.
-add_executable (DamoclesAI "DamoclesAI.cpp" "DamoclesAI.h")
+# Explicit, stable list of sources and headers for reliable dependency tracking.
+set(DAMOCLESAI_SOURCES
+  "${CMAKE_SOURCE_DIR}/src/DamoclesAI.cpp"
+ "src/FileLoader.cpp" )
 
+set(DAMOCLESAI_HEADERS
+ "src/DamoclesAI.h"
+"src/FileLoader.h"
+)
+
+# Add source to this project's executable.
+add_executable (DamoclesAI
+  ${DAMOCLESAI_SOURCES}
+  ${DAMOCLESAI_HEADERS}
+)
+
+# Ensure target uses C++20 when supported (keeps original conditional behavior).
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET DamoclesAI PROPERTY CXX_STANDARD 20)
 endif()
+
+# Make headers available to the target (private include).
+target_include_directories(DamoclesAI PRIVATE "${CMAKE_SOURCE_DIR}/include")
 
 # TODO: Add tests and install targets if needed.
