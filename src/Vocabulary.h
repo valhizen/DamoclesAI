@@ -1,11 +1,3 @@
-#include <string>
-#include <iostream>
-#include <vector>
-#include <sstream>
-#include <unordered_map>
-#include <algorithm>
-#include <fstream>
-
 namespace Damocles {
 
 	class Vocabulary {

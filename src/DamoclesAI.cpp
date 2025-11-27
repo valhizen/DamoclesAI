@@ -1,6 +1,4 @@
 #include "DamoclesAI.h"
-#include "FileLoader.h"
-#include "Vocabulary.h"
 
 int main() {
 	std::cout << "Damocles AI\n";

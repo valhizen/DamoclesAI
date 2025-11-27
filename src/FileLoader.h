@@ -1,12 +1,5 @@
 #pragma once
 
-#include <string>
-#include <filesystem>
-#include <fstream>
-#include <iostream> 
-#include <regex>
-
-
 namespace Damocles {
 	class FileLoader {
 	public:

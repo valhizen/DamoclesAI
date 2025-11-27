@@ -27,6 +27,11 @@ add_executable (DamoclesAI
   ${DAMOCLESAI_HEADERS}
 )
 
+# Configure Precompiled Headers (CMake 3.16+, but compatible with your setup)
+if (CMAKE_VERSION VERSION_GREATER_EQUAL 3.16)
+  target_precompile_headers(DamoclesAI PRIVATE "src/pch.h")
+endif()
+
 # Ensure target uses C++20 when supported (keeps original conditional behavior).
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET DamoclesAI PROPERTY CXX_STANDARD 20)
