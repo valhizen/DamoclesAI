@@ -14,12 +14,12 @@ project ("DamoclesAI")
 # Explicit, stable list of sources and headers for reliable dependency tracking.
 set(DAMOCLESAI_SOURCES
   "${CMAKE_SOURCE_DIR}/src/DamoclesAI.cpp"
- "src/FileLoader.cpp" )
+ "src/FileLoader.cpp"  "src/Encoder.cpp" "src/Vocabulary.cpp")
 
 set(DAMOCLESAI_HEADERS
  "src/DamoclesAI.h"
 "src/FileLoader.h"
-)
+ "src/Encoder.h" "src/Vocabulary.h")
 
 # Add source to this project's executable.
 add_executable (DamoclesAI
